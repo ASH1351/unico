@@ -1,0 +1,115 @@
+@import "tailwindcss";
+
+@theme {
+  --color-warm-ivory: #FAF5EF;
+  --color-porcelain: #FFFCF8;
+  --color-dusty-blush: #E7C7C0;
+  --color-dusty-blush-light: #F8ECE9;
+  --color-dusty-blush-dark: #C99FA5;
+  --color-burgundy: #794653;
+  --color-burgundy-dark: #582F3B;
+  --color-burgundy-light: #9B606F;
+  --color-champagne-gold: #B39664;
+  --color-champagne-gold-light: #D8C39B;
+  --color-muted-olive: #8E9078;
+  --color-warm-charcoal: #332B2B;
+  --color-warm-sand: #F2ECE3;
+  --color-border-subtle: rgba(121, 70, 83, 0.12);
+  --color-border-gold: rgba(179, 150, 100, 0.28);
+
+  --font-serif: "Cormorant Garamond", Georgia, serif;
+  --font-sans: "Manrope", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  --font-script: "Pinyon Script", "Cormorant Garamond", cursive;
+}
+
+:root {
+  color-scheme: light;
+}
+
+html {
+  scroll-behavior: smooth;
+  font-family: var(--font-sans);
+  background-color: var(--color-warm-ivory);
+  color: var(--color-warm-charcoal);
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+  min-height: 100vh;
+  background-color: var(--color-warm-ivory);
+}
+
+/* Custom fine luxury scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: #FAF5EF;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #D8C39B;
+  border-radius: 9999px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #B39664;
+}
+
+/* Subtle luxury animations & utility classes */
+.font-serif-luxury {
+  font-family: var(--font-serif);
+  letter-spacing: -0.01em;
+}
+
+.font-script-luxury {
+  font-family: var(--font-script);
+}
+
+.font-sans-luxury {
+  font-family: var(--font-sans);
+}
+
+/* Glassmorphism / luxury frost */
+.atelier-frost {
+  background: rgba(255, 252, 248, 0.82);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+}
+
+.atelier-card-shadow {
+  box-shadow: 0 10px 30px -10px rgba(121, 70, 83, 0.08), 0 1px 3px 0 rgba(51, 43, 43, 0.04);
+}
+
+.atelier-card-hover {
+  transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.atelier-card-hover:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 20px 40px -15px rgba(121, 70, 83, 0.14), 0 4px 8px 0 rgba(51, 43, 43, 0.04);
+}
+
+/* Delicate gold border shimmer */
+.gold-rule {
+  height: 1px;
+  background: linear-gradient(90deg, transparent 0%, #B39664 50%, transparent 100%);
+  opacity: 0.55;
+}
+
+/* Reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
